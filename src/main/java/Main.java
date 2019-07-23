@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.SyncFailedException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,11 +47,27 @@ public class Main {
             }
             else if( command.equals( "Remove"))
             {
-
+                switch (smo[0]) {
+                    case "Doctor":
+                        for(Doctor d : AllDocs)
+                        {
+                            if(d.getName().equals(smo[1]) && d.getSurName().equals(smo[2])) {
+                               AllDocs.remove(d);
+                            }
+                        }
+                        break;
+                    case "Patient":
+                        for(Patient p : AllPats)
+                        {
+                            if(p.getName().equals(smo[1]) && p.getSurName().equals(smo[2])) {
+                                AllDocs.remove(p);
+                            }
+                        }
+                        break;                }
             }
             else
             {
-
+                System.out.println("Command was typed incorrect");
             }
 
 
