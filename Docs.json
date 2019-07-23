@@ -1,1 +1,13 @@
-[{"name":"Rima","surName":"Shahbazyan","specialization":"null"},{"name":"Rosie","surName":"Tunyan","specialization":"null"}]
+[ {
+  "name" : "Rima",
+  "surName" : "Shahbazyan",
+  "specialization" : "null"
+}, {
+  "name" : "Rosie",
+  "surName" : "Tunyan",
+  "specialization" : "null"
+}, {
+  "name" : "Heghine",
+  "surName" : "Karganyan",
+  "specialization" : "null"
+} ]

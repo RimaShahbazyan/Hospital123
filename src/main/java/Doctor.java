@@ -4,12 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
+import java.util.LinkedList;
 
 public class Doctor extends Human implements Serializable {
 
 
     public String specialization;
-    public transient  Patient[] patients = new Patient[100];
+    private LinkedList<Patient> patients = new LinkedList<>();
     private void readDoctor(ObjectInputStream in)
             throws IOException, ClassNotFoundException{
 

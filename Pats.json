@@ -1,1 +1,7 @@
-[{"name":"Valod","surName":"Poghosyan"},{"name":"Varduhi","surName":"Qeshishyan"}]
+[ {
+  "name" : "Valod",
+  "surName" : "Poghosyan"
+}, {
+  "name" : "Varduhi",
+  "surName" : "Qeshishyan"
+} ]

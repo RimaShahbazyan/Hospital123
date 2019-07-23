@@ -1,5 +1,6 @@
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.File;
 import java.io.FileReader;
@@ -20,6 +21,7 @@ public class Main {
         ArrayList<Patient> AllPats =  new ArrayList<>();
         try {
             ObjectMapper op = new ObjectMapper();
+            op.configure(SerializationFeature.INDENT_OUTPUT, true);
             FileReader frDocs = new FileReader("Docs.json");
             FileReader frPats = new FileReader("Pats.json");
 
