@@ -100,24 +100,40 @@ public class Main {
 //            String[] smo = Sc.nextLine().split(" ");
 //
 //            if(command.equals( "Add"))
-//            {
-//                switch (smo[0]) {
-//                    case "Doctor":
-//                        AllDocs.add( new Doctor(smo[1], smo[2], "null")); break;
-//                    case "Patient":
-//                        AllPats.add( new Patient(smo[1], smo[2], "null")); break;
-//                }
-//
-//            }
-//            else if( command.equals( "Remove"))
-//            {
-//
-//            }
-//            else
-//            {
-//
-//            }
-//
+            {
+                switch (smo[0]) {
+                    case "Doctor":
+                        AllDocs.add( new Doctor(smo[1], smo[2], "null")); break;
+                    case "Patient":
+                        AllPats.add( new Patient(smo[1], smo[2], "null")); break;
+                }
+
+
+            }
+            else if( command.equals( "Remove"))
+            {
+                switch (smo[0]) {
+                    case "Doctor":
+                        for(Doctor d : AllDocs)
+                        {
+                            if(d.getName().equals(smo[1]) && d.getSurName().equals(smo[2])) {
+                               AllDocs.remove(d);
+                            }
+                        }
+                        break;
+                    case "Patient":
+                        for(Patient p : AllPats)
+                        {
+                            if(p.getName().equals(smo[1]) && p.getSurName().equals(smo[2])) {
+                                AllDocs.remove(p);
+                            }
+                        }
+                        break;                }
+            }
+            else
+            {
+                System.out.println("Command was typed incorrect");
+            }
 //
 //            op.writeValue(new File("Docs.json"), AllDocs);
 //            op.writeValue(new File("Pats.json"), AllPats);
