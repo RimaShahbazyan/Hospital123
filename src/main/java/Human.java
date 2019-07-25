@@ -9,7 +9,7 @@ public abstract class Human implements Serializable {
 
     private String name;
     private String surname;
-
+    private String passportID;
     public String getName()
     {
         return name;
